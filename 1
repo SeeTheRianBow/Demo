@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>自助订餐软件</title>
+		<style>
+			.main{margin: auto;
+			width: 960px;
+			height: 1150px;
+			overflow: hidden;
+			border: 8px solid gold;
+			border-radius: 5px;
+			box-shadow:0 5px 20px rgba(238, 199, 16, 0.9);
+			display: block;
+			}
+			.head{width: 100%;
+			height: 250px;
+			filter: brightness(250%);
+			background: url(img/1.jpg) repeat scroll top left;
+			background-size: cover;
+			background-position:50% 50% ;
+			z-index: 1;
+			box-shadow:0 5px 20px rgba(238, 199, 16, 0.9), 3px 3px 15px rgba(238, 199, 16, 0.9) inset;
+			}
+			.mask{width: 960px;
+			height: 250px;
+			float: left;
+			display: block;
+			top: 0;
+			left: 0;
+			margin: auto;
+			background-color: burlywood;
+			opacity: 0.6;
+			z-index: 2;
+			transition: all 1.5s;
+			}
+			.box{position: absolute;
+			top: 200px;
+			left: 1300px;
+			width: 200px;
+			height: 100px;
+			background-size: cover;
+			background-color: gold;
+		    box-shadow: 0 5px 20px rgba(240, 65, 85, 0.9);  
+		    text-shadow: 2px 2px 8px rgba(240, 65, 85, 0.9);
+			border: 1px solid rgba(238, 199, 16, 0.9);
+			
+			z-index: 2;}
+			.name2{margin: 40px;
+			color:white;
+			font-size:55px;
+			 text-shadow:  2px 2px 8px  rgba(238, 199, 16, 0.9);
+			 transition: all 1s; 
+			 	-ms-animation:loading  1.5s infinite linear; 
+			 	-webkit-animation:load  1.5s infinite linear;}
+			 	@-ms-keyframes load{
+			 		from{color: white;
+			 			text-shadow:  2px 2px 8px  rgba(238, 199, 16, 0.9);}
+			 		to{color:rgba(240, 65, 85, 0.9);
+			 			text-shadow:  2px 2px 8px  rgba(240, 65, 85, 0.9);}
+			 	}
+				
+			@-webkit-keyframes load{
+			 		from{color: white;
+			 			text-shadow:  2px 2px 8px  rgba(238, 199, 16, 0.9);}
+			 		to{color:white;
+			 			text-shadow:  2px 2px 8px  rgba(240, 65, 85, 0.9);}
+			 	}
+			
+			 .box:hover .name{
+			 	color:rgba(240, 65, 85, 0.9);
+			 text-shadow: 2px 2px 8px rgba(240, 65, 85, 0.9);}
+			.main:hover .mask{width: 960px;
+			height: 250px;
+			opacity: 0;
+				/*transform: translate(-970px,-300px);*/}
+/*	/*	/*	/*
+			 .box:hover{
+			 	box-shadow: 0 5px 20px  rgba(238, 199, 16, 0.9);
+			background-color:rgba(240, 65, 85, 0.9)  ;
+			 	}*/
+	.container {
+		border: ;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.test {
+  float: left;
+  width: 200px;
+  height: 60px;
+  line-height: 50px;
+
+  text-align: center;
+ /* background:blue;*/
+  font-size:20px;
+  color: #500716;
+  border-top:1px solid greenyellow;
+  -ms-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.test1 {
+	padding-top: 10px;
+  float: left;
+  width: 200px;
+  height: 60px;
+  line-height: 50px;
+text-shadow:  2px 2px 8px  rgba(240, 65, 85, 0.9);
+  text-align: center;
+ /* background:blue;*/
+  font-size:35px;
+  color: white;
+  border-top:1px solid greenyellow;
+
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+	-ms-animation:loading  2s infinite linear; 
+			 	-webkit-animation:loading  2s infinite linear;}
+			 	@-ms-keyframes loading{
+			 		30%{color: white;
+			 			text-shadow:  2px 2px 10px  rgba(238, 199, 16, 0.9);}
+			 		60%{color:white;
+			 			text-shadow:  2px 2px 10px  rgba(240, 65, 85, 0.9);}
+			 			60%{color:white;			 			
+			 			text-shadow:  2px 2px 10px  rgba(0, 255, 0, 0.9);}
+			 	}
+				
+			@-webkit-keyframes loading{
+			 		30%{color: white;
+			 			text-shadow:  2px 2px 10px  rgba(238, 199, 16, 0.9);}
+			 		60%{color:white;
+			 			text-shadow:  2px 2px 10px  rgba(240, 65, 85, 0.9);}
+			 			60%{color:white;
+			 			text-shadow:  2px 2px 10px  rgba(0, 255, 0, 0.9);}
+			 	}
+.test:hover {
+	
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.3);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  color:white;
+  background-color: red;
+  
+}
+.meanu{float: left;
+	width: 200px;
+height:900px;
+background-color:rgba(238, 199, 16, 0.11) ;
+filter: brightness(20px);
+border-top: 2px solid gold;
+border-right: 7px solid gold;
+
+box-shadow: 0 5px 20px rgba(238, 199, 16, 0.9);  }
+  .good{margin-left: 215px;
+  margin-top: 10px;
+
+
+width: 735px;
+height: 750px;
+
+}
+.choose:hover{float: left;
+	margin: 20px;
+	width: 200px;
+height: 250px;
+/*transform: rotateZ(5deg);*/
+background-size: cover;
+background-position: 50% 50%;
+border-radius: 5px;
+box-shadow: 0 5px 20px  rgba(240, 65, 85, 0.9); }
+.choose{float: left;
+	margin: 20px;
+	width: 200px;
+height: 250px;
+overflow: hidden;
+ background-color: wheat;
+cursor: pointer;
+background-repeat: no-repeat;
+background-size: cover;
+background-position: 50% 50%;
+border-radius: 5px;
+box-shadow: 0 5px 20px rgba(238, 199, 16, 0.9); 
+transition: all 1s;
+-webkit-transition: all 1s;}
+.	
+ .img {
+  height:250px;
+  width:200px;
+  border-radius: 3px;
+  position: relative;
+  top: 0;
+  left: 0;
+   overflow: hidden;
+  z-index: 0;
+  
+   display: inline-block;
+   transition: all 1s ease-in-out;
+   -webkit-transition: all 1s;
+   -ms-transition: all 1s;}
+  
+ .img:hover {
+ 	-ms-transform: scale(1.3)|translate(5px,2px);
+ 	transform: scale(1.3) translate(5px,2px);
+ -webkit-transform: scale(1.3) translate(5px,2px);
+ 	box-shadow: 0 5px 20px  rgba(240, 65, 85, 0.9); 
+  position: relative;
+  top: 0;
+  left: 0;
+  border-radius: 2px;
+  z-index: 0;  
+   display: inline-block;
+   background-color: wheat;
+ opacity: 0.4;
+   overflow: hidden;
+}
+ .good1{margin-left: 215px;
+  margin-top: 10px;
+
+
+width: 735px;
+height: 750px;
+
+}
+.choose1{float: left;
+	margin: 20px;
+	width: 200px;
+height: 250px;
+overflow: hidden;
+background-color:rgba(240, 65, 85, 0.3) ;
+background-size: cover;
+background-position: 50% 50%;
+border-radius: 5px;
+box-shadow:  0px 5px 20px  rgba(238, 199, 16, 0.9);
+ }
+.choose1:hover{float: left;
+	margin: 20px;
+	width: 200px;
+height: 250px;
+background-size: cover;
+background-position: 50% 50%;
+border-radius: 5px;
+box-shadow:  0px 5px 20px  rgba(138, 43, 226, 0.9);
+}
+span{position: relative;
+top:-200px;
+left: 30px;
+	font-size: 20px;
+color: white;
+text-shadow: 2px 2px 10px  rgba(238, 199, 16, 0.9);
+z-index: 5;
+opacity: 0;
+}
+.choose:hover span{
+	color:black; 
+	text-shadow: 2px 2px 10px  rgba(238, 199, 16, 0.9);
+	opacity: 1;
+}
+.choose1:hover span{
+	color:black; 
+	text-shadow: 2px 2px 10px  rgba(238, 199, 16, 0.9);
+	opacity: 1;
+}
+.line1{weight: 700px;
+height: 1px;
+background-color: lightgray;
+position: relative;
+top:290px;}
+.line2{weight: 700px;
+height: 1px;
+background-color: lightgray;
+position: relative;
+top:580px;}
+.line3{height: 700px;
+height: 1px;
+background-color: lightgray;
+position: relative;
+top:x;}
+	.demo,.Img,.Mask,.border{
+			 position: relative;
+			 top: 360px;
+			 left: 20px;
+				width: 150px;
+			height: 150px;
+			border-radius: 50%;
+			}
+			.demo{position: relative;
+			display: block;
+		
+			}
+			.Img{
+				background: url(img/14.jpg) repeat scroll top left;
+				background-size: cover;
+				background-position:50% 50%;
+			}
+			.Img,.Mask,.border{position:absolute ;
+			left: 0;
+			top: 0;
+			}
+			.Mask{text-align: center;
+			color: rgba(255,255,255,1);
+			transition: all 0.5s ease-in;
+			font-size: 25px;
+			-webkit-transition: all 0.5s ease-in;}
+			.info{
+				margin-top: 50%;
+				-webkit-transform: translateY(-50%);
+				transform: translateY(-50%);
+			}
+			.border{border: 5px solid #072256;
+			border-left-color:#E07514;
+			border-top-color: #E07514;
+			box-sizing: border-box;
+			transition: all 0.5s ease-in;
+			-webkit-transition: all 0.5s ease-in;
+			}
+			.demo:hover .Mask{
+				background-color: rgba(0,0,0,0.5);
+				color: rgba(255,255,255,1);
+				
+			}
+			.demo:hover .border{
+			transform: rotate(180deg);
+				-webkit-transform: rotate(180deg);
+			}
+			.text{width: 500px;
+			height: 650px;
+			position: relative;
+			top: 150px;
+			left: 300px;
+			border-radius: 10px;
+		    box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.3);
+			}
+			 .Input{
+				width: 90px;
+				height: 50px;
+				border: none;
+				outline: none;
+				background-color: red;
+				position: relative;
+				top:100px;
+				left: 350px;
+				
+		
+			    }
+			   
+			.con{position: relative;
+			top: -15px;
+			left: -50px;
+				width: 200px;
+				height: 40px;
+				outline: none;
+				border:2px solid darkorchid;
+				color: white;
+				font-size:20px;
+				background-color: darkorchid;
+				transition: all 1s;
+				-ms-transition: all 1s;
+				-webkit-transition: all 1s;
+			}
+			.con:hover{position: relative;
+			top: -15px;
+			left: -50px;
+				width: 200px;
+				height: 40px;
+				outline: none;
+				border:2px solid darkorchid;
+				color:darkorchid;
+				font-size: 20px;
+				background-color: white; 
+				transition: all 1s;
+				-ms-transition: all 1s;
+				-webkit-transition: all 1s;
+			}
+			#Meanu{position: relative;
+			left: -150px;}
+			.Text{
+				position: relative;
+				top:300px;
+				left: 200px;
+				font-size: 60px;
+				color: white;
+                text-shadow: 2px 2px 10px  rgba(238, 199, 16, 0.9);	
+                	-ms-animation:loading  2s infinite linear; 
+			 	-webkit-animation:loading  2s infinite linear;}
+			 	@-ms-keyframes loading{
+			 		30%{color: white;
+			 			text-shadow:  2px 2px 10px  rgba(238, 199, 16, 0.9);}
+			 		60%{color:white;
+			 			text-shadow:  2px 2px 10px  rgba(240, 65, 85, 0.9);}
+			 			60%{color:white;			 			
+			 			text-shadow:  2px 2px 10px  rgba(0, 255, 0, 0.9);}
+			 	}
+				
+			@-webkit-keyframes loading{
+			 		30%{color: white;
+			 			text-shadow:  2px 2px 10px  rgba(238, 199, 16, 0.9);}
+			 		60%{color:white;
+			 			text-shadow:  2px 2px 10px  rgba(240, 65, 85, 0.9);}
+			 			60%{color:white;
+			 			text-shadow:  2px 2px 10px  rgba(0, 255, 0, 0.9);}
+			 	}		
+			}
+		</style>
+		</style>
+		<script type="text/javascript" src="js/jquery-3.2.1.js" ></script>
+	</head>
+	<body>
+		<div class="main">
+			<div class="head"><div class="mask" id="mask">
+					<h1 class="name2">欢迎使用自助点餐系统</h1>
+				</div></div>
+			
+				
+		<div class="meanu">
+  <i class=""><div class="test1"><strong>分  类</strong></div></i>	
+  <i class=""><div class="test" id="good1"><strong>美味主食</strong></div></i>
+  <i class=""><div class="test" id="good2"><strong>炫酷饮品</strong></div></i>
+ <i class=""> <div class="test" id="good3"><strong>实惠套餐</strong></div></i>
+
+  <i class=""><div class="test" id="good4"><strong>精致甜点</strong></div></i>
+  	<a href="#" class="demo" id="A">
+		<div class="Img"></div>
+		<div class="Mask">
+			<div class="info">
+				
+				<h3 class="h3">提交订单</h3>
+				
+			</div>
+		</div>
+		<div class="border"></div></a>
+		<a class="demo">
+			<div class=""></div>
+		</a>
+
+				</div>
+				<div class="good" id="good">
+					<div class="choose"  >
+						<img class="img" src="img/14 (1).jpg" width="200px"height="250px"/>
+						<span><strong>孜然牛排</strong></span><br /><p class="P"></p>
+						<span>价格：</span><span class="R"><button value="30" style="background-color: lightblue;border: none;color: white;">30</button></span> <span>RMB</span>
+						
+						
+				
+					</div>	
+					<div class="choose" >	<img class="img" src="img/2.jpg" width="200px"height="250px"/>
+						<span><strong>酱汁鸡块</strong></span><br /><p class="P"></p>
+						<span>价格：</span><span class="R"><button value="35" style="background-color: lightblue;border: none;color: white;">35</button></span> <span>RMB</span>
+						
+					</div>
+					<div class="choose" >	<img class="img" src="img/14 (2).jpg" width="200px"height="250px"/>
+						<span><strong>红烧肉</strong></span><br /><p class="P"></p>
+						<span>价格：</span><span class="R"><button value="37" style="background-color: lightblue;border: none;color: white;">37</button></span> <span>RMB</span>
+					</div>
+					<div class="line1" ></div>
+					<div class="choose" >	<img class="img" src="img/4.jpg" width="200px"height="250px"/>
+						<span><strong>小牛排</strong></span><br /><p class="P"></p>
+						<span>价格：</span><span class="R"><button value="40" style="background-color: lightblue;border: none;color: white;">40</button></span> <span>RMB</span></div>
+					<div class="choose">	<img class="img" src="img/7 (2).jpg" width="200px"height="250px"/>
+						<span><strong>菠菜饺子</strong></span><br /><p class="P"></p>
+						<span>价格：</span><span class="R"><button value="25" style="background-color: lightblue;border: none;color: white;">25</button></span> <span>RMB</span>
+					</div>
+					<div class="choose">	<img class="img" src="img/18 (1).jpg" width="200px"height="250px"/>
+						<span><strong>砂锅牛肉</strong></span><br /><p class="P"></p>
+						<span>价格：</span><span class="R"><button value="40" style="background-color: lightblue;border: none;color: white;">40</button></span> <span>RMB</span>
+					</div>
+					<div class="line2"></div>
+					<div class="choose">	<img class="img" src="img/20 (2).jpg" width="200px"height="250px"/>
+						<span><strong>回锅肉</strong></span><br /><p class="P"></p>
+						<span>价格：</span><span class="R"><button value="44" style="background-color: lightblue;border: none;color: white;">44</button></span> <span>RMB</span>
+					</div>
+					<div class="choose">	<img class="img" src="img/16 (1).jpg" width="200px"height="250px"/>
+						<span><strong>白灼虾</strong></span><br /><p class="P"></p>
+						<span>价格：</span><span class="R"><button value="45" style="background-color: lightblue;border: none;color: white;">45</button></span> <span>RMB</span>
+					</div>
+					<div class="choose">	<img class="img" src="img/16 (2).jpg" width="200px"height="250px"/>
+						<span><strong>羊肉泡馍</strong></span><br /><p class="P"></p>
+						<span>价格：</span><span class="R"><button value="20" style="background-color: lightblue;border: none;color: white;">20</button></span> <span>RMB</span>
+					</div>
+				</div>
+				<div class="good1" id="Good" >
+					<div class="choose1" ><img class="img" src="img/10.jpg" width="200px"height="250px"/>
+						<span><strong>柠檬水</strong></span><br /><p class="P"></p>
+						<span>价格：</span><span class="R"><button value="15" style="background-color: lightblue;border: none;color: white;">15</button></span> <span>RMB</span>
+					</div>
+					<div class="choose1"><img class="img" src="img/5.jpg" width="200px"height="250px"/>
+						<span><strong>拿铁</strong></span><br /><p class="P"></p>
+						<span>价格：</span><span class="R"><button value="18" style="background-color: lightblue;border: none;color: white;">18</button></span> <span>RMB</span>
+					</div>
+					<div class="choose1"><img class="img" src="img/9 (2).jpg" width="200px"height="250px"/>
+						<span><strong>抹茶咖啡</strong></span><br /><p class="P"></p>
+						<span>价格：</span><span class="R"><button value="20" style="background-color: lightblue;border: none;color: white;">20</button></span> <span>RMB</span>
+					</div>
+					<div class="line1"></div>
+					<div class="choose1"><img class="img" src="img/31 (1).jpg" width="200px"height="250px"/>
+						<span><strong>乌龙茶</strong></span><br /><p class="P"></p>
+						<span>价格：</span><span class="R"><button value="25" style="background-color: lightblue;border: none;color: white;">25</button></span> <span>RMB</span>
+					</div>
+					<div class="choose1"><img class="img" src="img/31 (2).jpg" width="200px"height="250px"/>
+						<span><strong>草莓鸡尾酒</strong></span><br /><p class="P"></p>
+						<span>价格：</span><span class="R"><button value="18" style="background-color: lightblue;border: none;color: white;">18</button></span> <span>RMB</span>
+					</div>
+					<div class="choose1"><img class="img" src="img/33 (1).jpg" width="200px"height="250px"/>
+						<span><strong>焦糖玛奇朵</strong></span><br /><p class="P"></p>
+						<span>价格：</span><span class="R"><button value="22" style="background-color: lightblue;border: none;color: white;">22</button></span> <span>RMB</span>
+					</div>
+					<div class="line2"></div>
+					<div class="choose1"><img class="img" src="img/33 (2).jpg" width="200px"height="250px"/>
+						<span><strong>樱桃鸡尾酒</strong></span><br /><p class="P"></p>
+						<span>价格：</span><span class="R"><button value="18" style="background-color: lightblue;border: none;color: white;">18</button></span> <span>RMB</span>
+					</div>
+					<div class="choose1"><img class="img" src="img/29.jpg" width="200px"height="250px"/>
+						<span><strong>缤纷夏日</strong></span><br /><p class="P"></p>
+						<span>价格：</span><span class="R"><button value="25" style="background-color: lightblue;border: none;color: white;">25</button></span> <span>RMB</span>
+					</div>
+					<div class="choose1"><img class="img" src="img/t016741075baa75fa8d.jpg" width="200px"height="250px"/>
+						<span><strong>哈啤</strong></span><br /><p class="P"></p>
+						<span>价格：</span><span class="R"><button value="50" style="background-color: lightblue;border: none;color: white;">50</button></span> <span>RMB</span>
+					</div>
+				</div>
+				<div class="good1" id="Good1" >
+					<div class="choose" ><img class="img" src="img/t010722ee66032bce9c.jpg" width="200px"height="250px"/>
+						<span><strong>套餐1</strong></span><br /><p class="P"></p>
+						<span>价格：</span><span class="R"><button value="30" style="background-color: lightblue;border: none;color: white;">30</button></span> <span>RMB</span>
+					</div>
+					<div class="choose"><img class="img" src="img/t012963f5fcd684dd96.jpg" width="200px"height="250px"/>
+						<span><strong>套餐2</strong></span><br /><p class="P"></p>
+						<span>价格：</span><span class="R"><button value="40" style="background-color: lightblue;border: none;color: white;">40</button></span> <span>RMB</span>
+					</div>
+					<div class="choose"><img class="img" src="img/t0151eb74d5010ec61b.jpg" width="200px"height="250px"/>
+						<span><strong>套餐3</strong></span><br /><p class="P"></p>
+						<span>价格：</span><span class="R"><button value="30" style="background-color: lightblue;border: none;color: white;">30</button></span> <span>RMB</span>
+					</div>
+					<div class="line1"></div>
+					<div class="choose"><img class="img" src="img/t015b994fe9bb422ce5.jpg" width="200px"height="250px"/>
+						<span><strong>套餐4</strong></span><br /><p class="P"></p>
+						<span>价格：</span><span class="R"><button value="35" style="background-color: lightblue;border: none;color: white;">35</button></span> <span>RMB</span>
+					</div>
+					<div class="choose"><img class="img" src="img/t0178819000f79b82c2.jpg" width="200px"height="250px"/>
+						<span><strong>套餐5</strong></span><br /><p class="P"></p>
+						<span>价格：</span><span class="R"><button value="38" style="background-color: lightblue;border: none;color: white;">38</button></span> <span>RMB</span>
+					</div>
+					<div class="choose"><img class="img" src="img/t019b2f69ab074d12ec.jpg" width="200px"height="250px"/>
+						<span><strong>套餐6</strong></span><br /><p class="P"></p>
+						<span>价格：</span><span class="R"><button value="30" style="background-color: lightblue;border: none;color: white;">30</button></span> <span>RMB</span>
+					</div>
+					<div class="line2"></div>
+					<div class="choose"><img class="img" src="img/t01a2812df671f8952a.jpg" width="200px"height="250px"/>
+						<span><strong>套餐7</strong></span><br /><p class="P"></p>
+						<span>价格：</span><span class="R"><button value="39" style="background-color: lightblue;border: none;color: white;">39</button></span> <span>RMB</span>
+					</div>
+					<div class="choose"><img class="img" src="img/t01b39711a20124477e.jpg" width="200px"height="250px"/>
+						<span><strong>套餐8</strong></span><br /><p class="P"></p>
+						<span>价格：</span><span class="R"><button value="44" style="background-color: lightblue;border: none;color: white;">44</button></span> <span>RMB</span>
+					</div>
+					<div class="choose"><img class="img" src="img/t01d0c2714924f9104e.jpg" width="200px"height="250px"/>
+						<span><strong>套餐9</strong></span><br /><p class="P"></p>
+						<span>价格：</span><span class="R"><button value="41" style="background-color: lightblue;border: none;color: white;">41</button></span> <span>RMB</span>
+					</div>
+				</div>
+					<div class="good1" id="Good2" >
+					<div class="choose1" ><img class="img" src="img/11.jpg" width="200px"height="250px"/>
+						<span><strong>美味饼干</strong></span><br /><p class="P"></p>
+						<span>价格：</span><span class="R"><button value="30" style="background-color: lightblue;border: none;color: white;">30</button></span> <span>RMB</span>
+					</div>
+					<div class="choose1"><img class="img" src="img/3.jpg" width="200px"height="250px"/>
+						<span><strong>巧克力蛋糕</strong></span><br /><p class="P"></p>
+						<span>价格：</span><span class="R"><button value="44" style="background-color: lightblue;border: none;color: white;">44</button></span> <span>RMB</span>
+					</div>
+					<div class="choose1"><img class="img" src="img/7 (1).jpg" width="200px"height="250px"/>
+						<span><strong>英式蛋糕</strong></span><br /><p class="P"></p>
+						<span>价格：</span><span class="R"><button value="40" style="background-color: lightblue;border: none;color: white;">40</button></span> <span>RMB</span>
+					</div>
+					<div class="line1"></div>
+					<div class="choose1"><img class="img" src="img/9 (1).jpg" width="200px"height="250px"/>
+						<span><strong>夹层蛋糕</strong></span><br /><p class="P"></p>
+						<span>价格：</span><span class="R"><button value="50" style="background-color: lightblue;border: none;color: white;">50</button></span> <span>RMB</span>
+					</div>
+					<div class="choose1"><img class="img" src="img/22 (1).jpg" width="200px"height="250px"/>
+						<span><strong>芒果蛋糕</strong></span><br /><p class="P"></p>
+						<span>价格：</span><span class="R"><button value="60" style="background-color: lightblue;border: none;color: white;">60</button></span> <span>RMB</span>
+					</div>
+					<div class="choose1"><img class="img" src="img/26 (1).jpg" width="200px"height="250px"/>
+						<span><strong>水果蛋糕</strong></span><br /><p class="P"></p>
+						<span>价格：</span><span class="R"><button value="50" style="background-color: lightblue;border: none;color: white;">50</button></span> <span>RMB</span>
+					</div>
+					<div class="line2"></div>
+					<div class="choose1"><img class="img" src="img/26 (2).jpg" width="200px"height="250px"/>
+						<span><strong>爱心饼干</strong></span><br /><p class="P"></p>
+						<span>价格：</span><span class="R"><button value="30" style="background-color: lightblue;border: none;color: white;">30</button></span> <span>RMB</span>
+					</div>
+					<div class="choose1"><img class="img" src="img/27.jpg" width="200px"height="250px"/>
+					<span><strong>双层蛋糕</strong></span><br /><p class="P"></p>
+						<span>价格：</span><span class="R"><button value="40" style="background-color: lightblue;border: none;color: white;">40</button></span> <span>RMB</span></div>
+					<div class="choose1"><img class="img" src="img/24 (1).jpg" width="200px"height="250px"/>
+					<span><strong>寿司</strong></span><br /><p class="P"></p>
+						<span>价格：</span><span class="R"><button value="20" style="background-color: lightblue;border: none;color: white;">20</button></span> <span>RMB</span></div>
+				</div>
+				<div class="text" id="txet">
+					<br />
+					<h1>订单</h1><p id="time"></p>
+					<div class="line3"></div>
+		<h4>总菜单：</h4><p id="Meanu" value=""></p>
+				<br />
+	 <h4> 总价格：</h4>   	<p id="Price"></p>
+				<br />
+	   <h4> 序列号：</h4>    	<p id="Number"></p>
+				<br />
+				
+				<button class="con">退出并打印订单</button>
+				</div>
+				<p class="Text"></p>
+			</div>
+			
+			
+	
+		<script>
+			//
+		 $("#good1").click(function() {
+            $("#good").slideDown(300);
+        });
+        //
+        $("#good2").click(function() {
+        	$("#good").slideUp(300);
+        	$("#Good1").slideUp(300);
+            $("#Good").slideDown(300);
+        });
+        //
+         $("#good3").click(function() {
+        	$("#good").slideUp(300);
+        	  $("#Good").slideUp(300);
+            $("#Good1").slideDown(300);
+        });
+        //
+          $("#good4").click(function() {
+        	$("#good").slideUp(300);
+        	  $("#Good").slideUp(300);
+            $("#Good1").slideUp(300);
+             $("#Good2").slideDown(300);
+        });
+        //
+          $("#A").click(function() {
+        	$("#good").slideUp(300);
+        	  $("#Good").slideUp(300);
+            $("#Good1").slideUp(300);
+             $("#Good2").slideUp(300);
+             $("#text").slideDown(300);
+             
+        });
+        //
+        var s;
+        var price;
+        $("[class='choose']").click(function(){
+        	s=$(this).text();  
+     
+    
+      
+  $(this).html("<br />"+"<center>"+"已选择"+"</center>"+"<br />"+"<center>"+"<b>"+s+"<b>"+"</center>");
+
+   $(this).unbind('click');
+ 
+        })
+         $("[class='choose1']").click(function(){
+ var s=$(this).text();
+ $(this).html("<br />"+"<center>"+"已选择"+"</center>"+"<br />"+"<center>"+"<b>"+s+"<b>"+"</center>");
+   $(this).unbind('click');
+        })
+         $(function(){
+         	var mydate = new Date();
+         	var t=mydate.toLocaleString();
+         	var d;
+         	d=Math.floor(Math.random()*(200-1)+1);
+         	$("#time").text(t);
+         	$("#Number").text(d+"号").css("font-size","30px");
+         })
+         $("#A").click(function(){
+         	 var k=$("b").text();
+         	var pri=$("div:contains(已选择)>button").val();
+//       	price+=pri; 
+//    	Price=eval(price);
+         	$("#Price").text(pri);
+         	  $("#Meanu").text(k);
+         })
+         $(".con").click(function(){$(".text").hide();
+         $(".Text").text("感谢您的光临！");
+         $("#good,#Good1,#Good2,#Good").remove();
+     
+         })
+		</script>
+	</body>
+</html>
